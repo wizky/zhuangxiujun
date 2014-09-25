@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMapActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/fragment_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.campingfun.vacancyhunter.campsitehunter.maps.BaseMapFragment" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/searchBoxPadding"
+            android:gravity="left">
+            <AutoCompleteTextView
+                android:layout_weight="9"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:background="@android:color/white"
+                android:padding="@dimen/searchboxPadding"
+                android:id="@+id/main_map_autoCompleteSearchTextView"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:hint="@string/main_map_searchtext"
+                android:maxLines="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+</RelativeLayout>
